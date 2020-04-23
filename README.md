@@ -1,6 +1,6 @@
 # External Monitor Templates
 
-Use the following scripts as templates to create your own BIG-IP external monitors.
+Use the following scripts as templates to create your own BIG-IP external monitors.\
 Use the files ending in debug during your tests, and the other files in production as debugging adds unnecessary work.
 
 **The system will automatically kill a script that is running, before starting a new process for that script.**\
