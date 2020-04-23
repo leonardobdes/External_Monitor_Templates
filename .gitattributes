@@ -1,4 +1,0 @@
-*.sh linguist-detectable=true
-*.ps linguist-detectable=true
-*.py linguist-detectable=true
-*.tcl linguist-detectable=true
