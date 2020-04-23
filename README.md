@@ -8,17 +8,17 @@ Use the files ending in debug during your tests, and the other files in producti
 **Tested in version 11.3.0 and 15.1.0**
 
 ## Bash External Monitor Template
-bash_external_monitor_template.sh
+bash_external_monitor_template.sh\
 bash_external_monitor_template_debug.sh
 
 ## Perl External Monitor Template
-perl_external_monitor_template.pl
+perl_external_monitor_template.pl\
 perl_external_monitor_template_debug.pl
 
 ## Python External Monitor Template
-python_external_monitor_template.py
+python_external_monitor_template.py\
 python_external_monitor_template_debug.py
 
 ## Tcl External Monitor Template
-tcl_external_monitor_template.tcl
+tcl_external_monitor_template.tcl\
 tcl_external_monitor_template_debug.tcl
