@@ -23,9 +23,6 @@ python_external_monitor_template_debug.py
 tcl_external_monitor_template.tcl\
 tcl_external_monitor_template_debug.tcl
 
-
 ## Author
-
-
 Name: Leonardo Souza\
 LinkedIn: https://uk.linkedin.com/in/leonardobdes
