@@ -1,8 +1,8 @@
 #!/usr/bin/tclsh
 
-# Leonardo Souza - 23/04/2020
+# Leonardo Souza - 24/04/2020
 # Tcl External Monitor Template Debug
-# Version 1.0.0
+# Version 1.1.0
 
 # This is a template for external monitor using Bash.
 # The script is only doing a ping to provide a full example.

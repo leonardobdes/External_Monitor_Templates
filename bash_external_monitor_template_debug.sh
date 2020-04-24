@@ -1,13 +1,16 @@
 #!/bin/bash
 
-# Leonardo Souza - 23/04/2020
+# Leonardo Souza - 24/04/2020
 # Bash External Monitor Template Debug
-# Version 1.0.0
+# Version 1.1.0
 
 # This is a template for external monitor using Bash.
 # The script is only doing a ping to provide a full example.
 # Modify the ping to any other command you need to use.
 # Don't forget that anything you output will mark the poll member up.
+
+# From version 11.3.0 at least, the system sets the environment variables
+# MON_TMPL_NAME ARGS_I PATH NODE_PORT PWD SHLVL NODE_IP NODE_NAME RUN_I _
 
 # All external monitor scripts are called with at least the following arguments.
 # When creating the monitor you pass more arguments using arguments section of the monitor.
@@ -17,15 +20,14 @@
 ip=${1:7}
 port=$2
 
-# Script name
-script=`basename $0`
-logger -p local0.notice "$script - PID: $$ IP: $ip Port: $port"
+# Log information
+logger -p local0.notice "$MON_TMPL_NAME - PID: $$ Name: $NODE_NAME IP: $ip Port: $port"
 
 # Run the command
 # -c1 = single ICMP packet
 ping -c1 $ip &> /dev/null
 result=$?
-logger -p local0.notice "$script - PID: $$ Result: $result"
+logger -p local0.notice "$MON_TMPL_NAME - PID: $$ Result: $result"
 
 # Check command result
 [ $result -eq 0 ] && echo "up"

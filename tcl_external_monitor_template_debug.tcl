@@ -1,8 +1,8 @@
 #!/usr/bin/tclsh
 
-# Leonardo Souza - 23/04/2020
+# Leonardo Souza - 24/04/2020
 # Tcl External Monitor Template Debug
-# Version 1.0.0
+# Version 1.1.0
 
 # This is a template for external monitor using Bash.
 # The script is only doing a ping to provide a full example.
@@ -17,14 +17,13 @@
 set ip [string range [lindex  $argv 0] 7 end]
 set port [lindex  $argv 1]
 
-# Script name
-set script [file tail $argv0]
-exec logger -p local0.notice "$script - PID: [pid] IP: $ip Port: $port"
+# Log information
+exec logger -p local0.notice "$::env(MON_TMPL_NAME) - PID: [pid] Name: $::env(NODE_NAME) IP: $ip Port: $port"
 
 # Run the command
 # -c1 = single ICMP packet
 set result [catch {exec ping -c1 $ip}]
-exec logger -p local0.notice "$script - PID: [pid] Result: $result"
+exec logger -p local0.notice "$::env(MON_TMPL_NAME) - PID: [pid] Result: $result"
 
 # Check command result
 if {$result == 0} {puts "up"}
